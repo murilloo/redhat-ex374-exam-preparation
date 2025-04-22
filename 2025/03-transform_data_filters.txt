@@ -1,0 +1,40 @@
+- name: create users from a file with hash
+  hosts: all 
+
+  vars:
+    users:
+      - name: one
+        first: one
+        middle: m
+        last: end
+      - name: two
+        first: two
+        middle: m
+        last: end
+      - name: three
+        first: three
+        middle: m
+        last: end
+      - name: four
+        first: four
+        middle: m
+        last: end
+
+  tasks:
+    - name: create remote user
+      vars:
+        password: "{{ lookup('password', 'password-' + item.name + ' length=6') }}"
+      user:
+        name: "{{ item.name }}"
+        password: "{{ password | password_hash('sha512','myrandomsalt') }}"
+        comment: "{{ item.first | capitalize }} {{ item.middle | capitalize }} {{ item.last | capitalize }}"
+      loop: "{{ users }}"
+
+    - name: read password from file and write hash/salt
+      vars:
+        file_content: "{{ lookup('file', 'password-' + item.name) }}"
+      lineinfile:
+        path: "password-{{ item.name }}"
+        line: "{{ file_content | password_hash('sha512','myrandomsalt') }}"
+      loop: "{{ users }}"
+      delegate_to: localhost

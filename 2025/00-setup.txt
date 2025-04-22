@@ -1,0 +1,8 @@
+# Register machine
+subscription-manager  register --auto-attach
+
+# Add Ansible Automation Platform
+subscription-manager repos --enable ansible-automation-platform-2.0-early-access-for-rhel-8-x86_64-rpms
+
+# Install Ansible navigator
+yum install ansible ansible-navigator -y
