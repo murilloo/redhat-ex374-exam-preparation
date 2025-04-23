@@ -1,3 +1,5 @@
+# ansible-navigator settings --sample > ansible-navigator.yml
+
 # ~/.ansible-navigator.yml
 
 ---
@@ -23,4 +25,14 @@ ansible-navigator:
 
 # ansible-navigator doc firewalld --eei ee-supported-rhel8
 # ansible-navigator doc firewalld --eei ee-supported-rhel8 --mode stdout
+# ansible-navigator run basic-web.yml --eei ee-supported-rhel8 --pp missing --mode stdout
+
+# Play with collections
+- name: play to run test
+  hosts: all
+  become: true
+  collections:
+    - ansible.builtin
+    - ansible.posix
+
 
