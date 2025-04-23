@@ -57,3 +57,9 @@ hostname
 
 # ansible-builder build -t ee-motd-minimal:1.0
 # ansible-navigator images --pp never --eei localhost/ee-motd-minimal:1.0
+# ansible-navigator run motd-test.yml --eei localhost/ee-motd-minimal --pp never -m stdout
+# podman tag localhost/ee-motd-minimal:1.0 hub.lab.example.com/ee-motd-minimal:latest
+# podman push hub.lab.example.com/ee-motd-minimal:latest
+# ansible-navigator run motd-test.yml --eei hub.lab.example.com/ee-motd-minimal:latest --pp always -m stdout
+
+
