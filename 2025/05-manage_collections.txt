@@ -8,6 +8,8 @@
 # ansible-galaxy collection build
 # create a namespace from Automation Hub
 # upload your collection
+# approve it
+# ansible-galaxy collection install -r collection/requirements.yml -p collections/
 
 # podman login registry.redhat.io
 # podman login -u student -p redhat123 hub.lab.example.com
