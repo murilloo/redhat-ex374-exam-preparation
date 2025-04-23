@@ -36,3 +36,34 @@ ansible-navigator:
     - ansible.posix
 
 
+# ansible-galaxy collection list
+# ansible-galaxy collection install community.crypto
+
+# ansible.cfg
+
+[defaults]
+inventory = ./inventory
+remote_user = devops
+collections_path = ./collections/
+
+[galaxy]
+server_list = rh-certified_repo, community_repo
+
+[galaxy_server.rh-certified_repo]
+url=https://hub.lab.example.com/api/galaxy/content/rh-certified/
+token=
+
+[galaxy_server.community.crypto]
+url=https://hub.lab.example.com/api/galaxy/content/community/
+token=
+
+# ansible-galaxy collection install redhat.openshift
+
+# requirements.yml
+
+collections:
+  - name: ansible.netcommon
+  - name: ansible.controller
+    version: 4.3.0
+
+# ansible-galaxy collection install redhat.openshift -r requirements.yml -p collections/
