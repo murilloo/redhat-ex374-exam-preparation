@@ -1,0 +1,8 @@
+# ansible-navigator images
+# podman images
+
+# Automation Hub --> Execution Environments 
+
+# ansible-navigator --eei ee-minimal-rhel8 run debug.yml --ee false
+
+
