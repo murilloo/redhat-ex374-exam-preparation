@@ -1,5 +1,7 @@
 
-
+# mkdir my_collection
+# cd my_collection
+# ansible-galaxy collection init test.mycollection
 
 # podman login registry.redhat.io
 # podman login -u student -p redhat123 hub.lab.example.com
@@ -15,7 +17,6 @@
   collections:
     - ansible.builtin
     - ansible.posix
-
 
 # ansible-galaxy collection list
 # ansible-galaxy collection install community.crypto
