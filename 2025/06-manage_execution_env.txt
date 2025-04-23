@@ -54,3 +54,5 @@ fundmotd
 
 # bindep.txt
 hostname
+
+# ansible-builder build -t ee-motd-minimal:1.0
