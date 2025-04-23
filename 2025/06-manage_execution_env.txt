@@ -56,3 +56,4 @@ fundmotd
 hostname
 
 # ansible-builder build -t ee-motd-minimal:1.0
+# ansible-navigator images --pp never --eei localhost/ee-motd-minimal:1.0
