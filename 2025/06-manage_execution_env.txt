@@ -1,8 +1,10 @@
 # ansible-navigator images
 # podman images
-
 # Automation Hub --> Execution Environments 
 
 # ansible-navigator --eei ee-minimal-rhel8 run debug.yml --ee false
 
+# ansible-navigator images --eei hub.lab.example.com/ee-minimal-rhel8 --pp missing
+# ansible-navigator images --eei hub.lab.example.com/ee-supported-rhel8 --pp missing
 
+# ansible-navigator run acl_info.yml -m stdout --eei ee-minimal-rhel8 --pp missing
