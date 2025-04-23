@@ -1,3 +1,25 @@
+# ansible-navigator settings --sample > ansible-navigator.yml
+
+# ~/.ansible-navigator.yml
+
+---
+ansible-navigator:
+
+  ansible:
+    config:
+       path: ./ansible.cfg
+
+  execution-environment:
+    image: ee-supported-rhel8:latest
+    pull:
+      policy: missing
+
+  mode: stdout
+
+  playbook-artifact:
+    enable: false
+
+
 # ansible-navigator images
 # podman images
 # Automation Hub --> Execution Environments 
