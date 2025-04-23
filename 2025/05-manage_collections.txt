@@ -1,7 +1,13 @@
 
+
 # mkdir my_collection
 # cd my_collection
 # ansible-galaxy collection init test.mycollection
+# echo "requires_ansible: '>=2.9.0' > meta/runtime.yml
+# same diretory of galaxy.yml
+# ansible-galaxy collection build
+# create a namespace from Automation Hub
+# upload your collection
 
 # podman login registry.redhat.io
 # podman login -u student -p redhat123 hub.lab.example.com
