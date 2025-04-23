@@ -53,7 +53,7 @@ server_list = rh-certified_repo, community_repo
 url=https://hub.lab.example.com/api/galaxy/content/rh-certified/
 token=
 
-[galaxy_server.community.crypto]
+[galaxy_server.community_repo]
 url=https://hub.lab.example.com/api/galaxy/content/community/
 token=
 
