@@ -8,3 +8,4 @@
 # ansible-navigator images --eei hub.lab.example.com/ee-supported-rhel8 --pp missing
 
 # ansible-navigator run acl_info.yml -m stdout --eei ee-minimal-rhel8 --pp missing
+# ansible-navigator run cockpit.yml -m stdout --eei ee-supported-rhel8 --pp missing
