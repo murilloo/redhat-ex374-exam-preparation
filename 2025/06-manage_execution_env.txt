@@ -48,3 +48,9 @@ depdencies:
 collections:
   - name: /build/exercse.motd.tar.gz
     type: file
+
+# requirements.txt
+fundmotd
+
+# bindep.txt
+hostname
