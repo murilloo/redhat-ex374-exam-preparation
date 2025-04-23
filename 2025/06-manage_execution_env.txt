@@ -1,4 +1,5 @@
 # ansible-navigator settings --sample > ansible-navigator.yml
+# ansible-navigator settings --effective -m stdout --eei hub.lab.example.com/ee-supported-rhel8:latest --pp never > sample.yml
 
 # ~/.ansible-navigator.yml
 
