@@ -1,0 +1,26 @@
+# ~/.ansible-navigator.yml
+
+---
+ansible-navigator:
+
+  ansible:
+    config:
+       path: ./ansible.cfg
+
+  execution-environment:
+    image: ee-supported-rhel8:latest
+    pull:
+      policy: missing
+
+  mode: stdout
+
+  playbook-artifact:
+    enable: false
+
+
+# podman login registry.redhat.io
+# podman login -u student -p redhat123 hub.lab.example.com
+
+# ansible-navigator doc firewalld --eei ee-supported-rhel8
+# ansible-navigator doc firewalld --eei ee-supported-rhel8 --mode stdout
+
